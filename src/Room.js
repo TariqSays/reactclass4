@@ -3,7 +3,8 @@ import './Room.css';
 
 function Room() {
     let [isLit, setLit] = useState(false);
-    let [age, setage] = useState(21);
+   // let [age, setage] = useState(21);
+    let [temp, settemp] = useState(72);
     //let Age = 45;
     //console.log("State" ,state);
    // const updateLit = () =>{
@@ -21,21 +22,27 @@ function Room() {
 
     return (
     <div className ={isLit?"lit":"dark"}>
-        This is Room Componet : Lit = {isLit ? "Lit":"Dark"}
+        this is Room Componet : Lit = {isLit ? "Lit":"Dark"}
         <br/>
-        Age : {age}
         <br/>
         
         <button onClick={ ()=>{
-            setLit(!isLit)
-        }}>Toggle Button</button>
+            setLit(true)
+        }}>ON Button</button>
 
-        <br/>
-    
         <button onClick={ ()=>{
-           setage(age++);
-        }}>Decrease Age</button>
-    
+            setLit(false)
+        }}>OFF Button</button>
+        <br></br>
+        the room temperature {temp}
+        <br/>
+        <br/>
+        <button onClick={ ()=>{
+           settemp(temp++);
+        }}>+</button>
+        <button onClick={ ()=>{
+            settemp(temp--)
+        }}>-</button>
     </div>
   );
 }
