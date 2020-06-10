@@ -6,13 +6,13 @@ function Room() {
     let [age, setage] = useState(21);
     //let Age = 45;
     //console.log("State" ,state);
-    const updateLit = () =>{
+   // const updateLit = () =>{
         //console.log("Button Clicked")
         //setLit(!isLit)
         //setage(++age);
         //isLit = !isLit;
         //Age = 47;
-    }
+    //}
 //    function decage(){
 //        setage(--age);
 //    }
@@ -33,7 +33,7 @@ function Room() {
         <br/>
     
         <button onClick={ ()=>{
-                setage(age++);
+           setage(age++);
         }}>Decrease Age</button>
     
     </div>
