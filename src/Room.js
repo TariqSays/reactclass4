@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './Room.css';
 
-function App() {
+function Room() {
     let [isLit, setLit] = useState(false);
     let [age, setage] = useState(21);
     //let Age = 45;
@@ -21,7 +20,7 @@ function App() {
 //   }
 
     return (
-    <div>
+    <div className ={isLit?"lit":"dark"}>
         This is Room Componet : Lit = {isLit ? "Lit":"Dark"}
         <br/>
         Age : {age}
@@ -29,18 +28,16 @@ function App() {
         
         <button onClick={ ()=>{
             setLit(!isLit)
-        }
-        }>Toggle Button</button>
+        }}>Toggle Button</button>
 
         <br/>
+    
         <button onClick={ ()=>{
-                console.log("Button Clicked");
                 setage(age++);
-        }}>
-            
-            Decrease Age</button>
+        }}>Decrease Age</button>
+    
     </div>
   );
 }
 
-export default App;
+export default Room;
